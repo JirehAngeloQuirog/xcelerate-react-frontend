@@ -1,0 +1,182 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+}
+
+/* Header styles */
+.navbar {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    position: fixed; /* Fix the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make it span the full width */
+    height: 85px; /* Adjust height to your preference */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for separation */
+    z-index: 1000; /* Ensure it stays on top */
+    padding-left: 20px;
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+/* Buttons container */
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between buttons */
+    margin-left: auto; /* Align buttons to the right */
+}
+
+/* Tournament button styles */
+.tournament-button {
+    background-color: white; /* Primary blue color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: color 0.1s ease;
+}
+
+.tournament-button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    color: white;
+}
+
+.tournament-button:active {
+    background-color: #003f7f; /* Even darker blue for active state */
+    transform: translateY(1px); /* Slight press effect */
+}
+
+/* Disabled Tournament button (when not logged in) */
+.tournament-button:disabled {
+    background-color: #e0e0e0; /* Light gray */
+    color: #a0a0a0; /* Lighter text color */
+    cursor: not-allowed;
+}
+
+/* Home button styles */
+.home-button {
+    background-color: white; /* Primary blue color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: color 0.1s ease;
+}
+
+.home-button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    color: white;
+}
+
+.home-button:active {
+    background-color: #003f7f; /* Even darker blue for active state */
+    transform: translateY(1px); /* Slight press effect */
+}
+
+/* Logout button styles */
+.out-button {
+    background-color: white; /* Primary blue color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: color 0.1s ease;
+}
+
+.out-button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    color: white;
+}
+
+.out-button:active {
+    background-color: #003f7f; /* Even darker blue for active state */
+    transform: translateY(1px); /* Slight press effect */
+}
+
+/* Log In button styles */
+.out-button-login {
+    background-color: white; /* Primary blue color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: color 0.1s ease;
+}
+
+.out-button-login:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    color: white;
+}
+
+.out-button-login:active {
+    background-color: #003f7f; /* Even darker blue for active state */
+    transform: translateY(1px); /* Slight press effect */
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the logo and buttons vertically */
+        height: auto; /* Adjust height for small screens */
+        padding: 1rem;
+    }
+
+    .logo img {
+        height: 80px; /* Slightly smaller logo for mobile */
+    }
+
+    .navbar-buttons {
+        flex-direction: column;
+        gap: 0.5rem; /* Reduce space between buttons */
+    }
+
+    .tournament-button,
+    .home-button,
+    .out-button,
+    .out-button-login {
+        width: 100%; /* Make buttons full-width on small screens */
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+}
