@@ -14,7 +14,8 @@ const TournamentPage = () => {
         {tournaments.map((tournament) => (
           <div key={tournament.id} className="tournament-card">
             <h3>{tournament.name}</h3>
-            <p>{tournament.date}</p>
+            <p>{tournament.startDate}</p>
+            <p>{tournament.endDate}</p>
             <p>{tournament.location}</p>
             <p>{tournament.description}</p>
             <p>Status: {tournament.status}</p>

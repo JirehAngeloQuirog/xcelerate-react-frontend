@@ -10,7 +10,7 @@
     font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 20px;
-    color: #202124;
+    color: black;
   }
   
   .create-tournament-form {
@@ -24,11 +24,13 @@
   
   .form-group {
     margin-bottom: 15px;
+    background-color: #f1f3f4;
+    color: #f1f3f4;
   }
   
   .form-group label {
     font-size: 1rem;
-    color: #202124;
+    color: black;
     display: block;
     margin-bottom: 5px;
   }
@@ -40,12 +42,16 @@
     font-size: 1rem;
     border: 1px solid #dadce0;
     border-radius: 5px;
+    background-color: white;
+    color: black;
   }
   
   .form-group input:focus,
   .form-group textarea:focus {
     border-color: #1a73e8;
     outline: none;
+    background-color: white;
+    color: black;
   }
   
   .form-group textarea {

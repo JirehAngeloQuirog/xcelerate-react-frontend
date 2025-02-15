@@ -6,7 +6,8 @@ import './CreateTournament.css';
 
 const CreateTournament = () => {
   const [tournamentName, setTournamentName] = useState('');
-  const [date, setDate] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [location, setLocation] = useState('');
   const [description, setDescription] = useState('');
 
@@ -17,7 +18,8 @@ const CreateTournament = () => {
     e.preventDefault();
     const newTournament = {
       name: tournamentName,
-      date,
+      startDate,
+      endDate,
       location,
       description,
       status: 'Upcoming',
@@ -44,14 +46,26 @@ const CreateTournament = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="date">Date</label>
+          <label htmlFor="startDate">Date Start</label>
           <input
             type="date"
-            id="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
+            id="startDate"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
             required
           />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="endDate">Date End</label>
+          <input
+            type="date"
+            id="endDate"
+            value={endDate}
+            onChange={(e) => setEndDate(e.target.value)}
+            required
+          />
+
         </div>
 
         <div className="form-group">

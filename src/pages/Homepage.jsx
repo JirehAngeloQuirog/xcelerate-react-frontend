@@ -5,7 +5,7 @@ import './Homepage.css';
 
 const Homepage = () => {
   const [meetingCode, setMeetingCode] = useState('');
-  const isAuthenticated = localStorage.getItem('isLoggedIn');
+  const isAuthenticated = localStorage.getItem('isLoggedIn') === 'true';
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
@@ -24,11 +24,14 @@ const Homepage = () => {
 
   const handleCreateTournament = () => {
     if (!isAuthenticated) {
-      alert("You need to be logged in to create a tournament!");
+      alert ("Please log in.");
       navigate('/');
+    } else {
+      alert ("Proceeding to create tournament page.");
     }
   };
 
+  
   return (
     <div className="app">
       <Navbar />

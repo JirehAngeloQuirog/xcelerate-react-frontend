@@ -1,34 +1,33 @@
-/* TournamentPage.css */
 
-/* Container for the whole Tournament page */
 .tournament-page-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #f5f5f5; /* Light gray background */
+    background-color: #f5f5f5; 
+    border-radius: 8px;
   }
   
-  /* Heading Style */
+ 
   h2 {
     font-size: 2rem;
     font-weight: 600;
-    color: #333; /* Dark color for the heading */
+    color: #333; 
     margin-bottom: 20px;
     text-align: center;
   }
   
-  /* Container for the list of tournaments */
+
   .tournament-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Flexible grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
     gap: 20px;
     max-width: 1200px;
     width: 100%;
     margin-top: 20px;
   }
   
-  /* Style for each tournament card */
+  
   .tournament-card {
     background-color: #fff;
     border-radius: 12px;
@@ -39,13 +38,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* Hover effect for tournament cards */
+  
   .tournament-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   }
   
-  /* Tournament name */
+  
   .tournament-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
@@ -53,10 +52,10 @@
     margin-bottom: 10px;
   }
   
-  /* Date and other information styling */
+  
   .tournament-card p {
     font-size: 1rem;
-    color: #666; /* Slightly lighter color for text */
+    color: #666; 
     margin: 5px 0;
   }
   

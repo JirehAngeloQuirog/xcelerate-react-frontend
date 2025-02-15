@@ -1,4 +1,3 @@
-/* General Styles */
 * {
     box-sizing: border-box;
 }
@@ -6,177 +5,134 @@
 body {
     margin: 0;
     background-color: white;
+    font-family: Arial, sans-serif;
 }
 
-/* Header styles */
 .navbar {
-    background-color: white;
-    color: black;
+    background-color: #003366;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-    padding: 0 1rem;
-    position: fixed; /* Fix the header to the top */
+    padding: 0 20px;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Make it span the full width */
-    height: 85px; /* Adjust height to your preference */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for separation */
-    z-index: 1000; /* Ensure it stays on top */
-    padding-left: 20px;
+    width: 100%;
+    height: 85px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
 }
 
-/* Logo styles */
 .logo {
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 100px;
-    margin-right: 2px;
-    margin-left: 2px;
+    height: 50px;
+    margin-right: 10px;
 }
 
-/* Buttons container */
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
 .navbar-buttons {
     display: flex;
     align-items: center;
-    gap: 1rem; /* Space between buttons */
-    margin-left: auto; /* Align buttons to the right */
+    gap: 1rem;
 }
 
-/* Tournament button styles */
-.tournament-button {
-    background-color: white; /* Primary blue color */
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+.premium-login-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.navbar-buttons button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 8px 16px;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    transition: color 0.1s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tournament-button:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
-    transform: translateY(-2px); /* Subtle lift on hover */
+.navbar-buttons button:hover {
+    background-color: white;
+    color: #003366;
+}
+
+.navbar-buttons button:active {
+    background-color: #e0e0e0;
+    color: #003366;
+}
+
+.out-button, .out-button-login {
+    background-color: #ff5722;
+    border: none;
+}
+
+.out-button:hover, .out-button-login:hover {
+    background-color: #e64a19;
     color: white;
 }
 
-.tournament-button:active {
-    background-color: #003f7f; /* Even darker blue for active state */
-    transform: translateY(1px); /* Slight press effect */
-}
-
-/* Disabled Tournament button (when not logged in) */
-.tournament-button:disabled {
-    background-color: #e0e0e0; /* Light gray */
-    color: #a0a0a0; /* Lighter text color */
+.navbar-buttons button:disabled {
+    background-color: #e0e0e0;
+    color: #a0a0a0;
     cursor: not-allowed;
-}
-
-/* Home button styles */
-.home-button {
-    background-color: white; /* Primary blue color */
-    color: black;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    transition: color 0.1s ease;
 }
 
-.home-button:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
-    transform: translateY(-2px); /* Subtle lift on hover */
-    color: white;
-}
-
-.home-button:active {
-    background-color: #003f7f; /* Even darker blue for active state */
-    transform: translateY(1px); /* Slight press effect */
-}
-
-/* Logout button styles */
-.out-button {
-    background-color: white; /* Primary blue color */
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    transition: color 0.1s ease;
-}
-
-.out-button:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
-    transform: translateY(-2px); /* Subtle lift on hover */
-    color: white;
-}
-
-.out-button:active {
-    background-color: #003f7f; /* Even darker blue for active state */
-    transform: translateY(1px); /* Slight press effect */
-}
-
-/* Log In button styles */
-.out-button-login {
-    background-color: white; /* Primary blue color */
-    color: black;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    transition: color 0.1s ease;
-}
-
-.out-button-login:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
-    transform: translateY(-2px); /* Subtle lift on hover */
-    color: white;
-}
-
-.out-button-login:active {
-    background-color: #003f7f; /* Even darker blue for active state */
-    transform: translateY(1px); /* Slight press effect */
-}
-
-/* Media Queries for responsive design */
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column; /* Stack the logo and buttons vertically */
-        height: auto; /* Adjust height for small screens */
-        padding: 1rem;
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
     }
 
     .logo img {
-        height: 80px; /* Slightly smaller logo for mobile */
+        height: 40px;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
     }
 
     .navbar-buttons {
         flex-direction: column;
-        gap: 0.5rem; /* Reduce space between buttons */
+        gap: 0.5rem;
+        width: 100%;
     }
 
-    .tournament-button,
-    .home-button,
-    .out-button,
-    .out-button-login {
-        width: 100%; /* Make buttons full-width on small screens */
-        padding: 12px;
-        font-size: 1.1rem;
+    .premium-login-group {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .navbar-buttons button {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .navbar-buttons button {
+        font-size: 0.8rem;
     }
 }

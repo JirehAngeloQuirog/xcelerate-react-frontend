@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Loginpage.css';
 import Navbar from '../Navbar';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -56,7 +57,9 @@ const LoginPage = () => {
           <a href="#">Forgotten password?</a>
         </div>
         <div className="signup-link">
-          <p>New to Facebook? <a href="#">Create New Account</a></p>
+          <p>New to Xcelerate? 
+            <Link to= "./create-account">Create New Account</Link>
+            </p>
         </div>
       </div>
     </div>

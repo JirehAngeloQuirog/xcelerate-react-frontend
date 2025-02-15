@@ -19,7 +19,27 @@ const Navbar = () => {
 
   // Navigate to Home page
   const handleHomepageClick = () => {
-    navigate('/home');
+      navigate('/home');
+  };
+
+  // Navigate to About page
+  const handleAboutClick = () => {
+    navigate('/about-page');
+  };
+
+  // Navigate to Settings page
+  const handleSettingsClick = () => {
+    navigate('/settings');
+  };
+
+  // Navigate to Contact page
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+
+  // Navigate to Premium page
+  const handlePremiumClick = () => {
+    navigate('/premium');
   };
 
   // Handle logout
@@ -40,26 +60,41 @@ const Navbar = () => {
         <h1>Xcelerate</h1>
       </div>
       <div className="navbar-buttons">
-        {/* Tournaments Button */}
-        <button className="tournament-button" onClick={handleTournamentClick}>
-          Tournaments
-        </button>
-
-        {/* Home Button */}
         <button className="home-button" onClick={handleHomepageClick}>
           Home
         </button>
 
-        {/* Conditional Rendering for Log In/Log Out */}
-        {isLoggedIn ? (
-          <button className="out-button" onClick={handleLogoutClick}>
-            Logout
-          </button>
-        ) : (
-          <button className="out-button-login" onClick={handleLoginClick}>
-            Log In
-          </button>
-        )}
+        <button className="about-button" onClick={handleAboutClick}>
+          About
+        </button>
+
+        <button className="settings-button" onClick={handleSettingsClick}>
+          Settings
+        </button>
+
+        <button className="contact-button" onClick={handleContactClick}>
+          Contact
+        </button>
+
+        <button className="tournament-button" onClick={handleTournamentClick}>
+          Tournaments
+        </button>
+
+        <button className="premium-button" onClick={handlePremiumClick}>
+          Premium
+        </button>
+
+        <div className="premium-login-group">
+          {isLoggedIn ? (
+            <button className="out-button" onClick={handleLogoutClick}>
+              Logout
+            </button>
+          ) : (
+            <button className="out-button-login" onClick={handleLoginClick}>
+              Log In / Sign Up
+            </button>
+          )}
+        </div>
       </div>
     </header>
   );
